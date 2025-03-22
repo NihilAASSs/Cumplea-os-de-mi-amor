@@ -1,1 +1,76 @@
-<h1>Hola, mi amor ❤️</h1> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffebf0;
+            color: #333;
+        }
+        .container {
+            margin: 50px auto;
+            width: 80%;
+        }
+        .gallery img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .hidden-message {
+            display: none;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #d6336c;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #d6336c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feliz Cumpleaños, Mi Amor ❤️</h1>
+        <p>Hoy es un día especial porque celebramos la existencia de la persona más maravillosa del mundo.</p>
+        
+        <h2>Nuestros Momentos Juntos</h2>
+        <div class="gallery">
+            <img src="foto1.jpg" alt="Nosotros 1">
+            <img src="foto2.jpg" alt="Nosotros 2">
+            <img src="foto3.jpg" alt="Nosotros 3">
+        </div>
+        
+        <h2>Un pequeño acertijo para ti:</h2>
+        <p>¿Recuerdas cuál fue nuestra primera cita? 🤔</p>
+        <input type="text" id="respuesta" placeholder="Escribe aquí">
+        <button onclick="checkAnswer()">Comprobar</button>
+        <p id="acertijo-respuesta" class="hidden-message">¡Correcto! Te amo mucho 💕</p>
+        
+        <h2>Una sorpresa especial</h2>
+        <button onclick="showMessage()">Haz clic aquí</button>
+        <p id="mensaje" class="hidden-message">Siempre estaré aquí para hacerte feliz. ❤️</p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            var respuesta = document.getElementById("respuesta").value.toLowerCase();
+            if (respuesta === "[tu respuesta correcta]") {
+                document.getElementById("acertijo-respuesta").style.display = "block";
+            }
+        }
+        function showMessage() {
+            document.getElementById("mensaje").style.display = "block";
+        }
+    </script>
+</body>
+</html>
